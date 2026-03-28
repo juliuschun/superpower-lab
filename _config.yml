@@ -1,0 +1,10 @@
+title: "슈퍼파워 랩"
+description: "당신의 뇌는 무엇에 보상하는가"
+baseurl: ""
+url: ""
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  toc_levels: "2..3"
+permalink: /:title/

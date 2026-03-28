@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header fade-in">
+    <div class="post-meta">
+      <time>{{ page.date | date: "%Y년 %m월 %d일" }}</time>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.excerpt %}
+    <p class="post-excerpt">{{ page.excerpt }}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-content fade-in">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer fade-in">
+    <a href="{{ '/' | relative_url }}" class="back-link">&larr; 목록으로 돌아가기</a>
+  </footer>
+</article>

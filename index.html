@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title fade-in">슈퍼파워 랩</h1>
+    <p class="hero-subtitle fade-in">당신의 뇌는 무엇에 보상하는가</p>
+    <div class="hero-divider fade-in"></div>
+    <p class="hero-desc fade-in">
+      쉬어야 하는 순간에도, 다른 일을 해야하는 순간에도,<br>
+      화가 나는 순간에도 나는 늘 그런 것들을 생각하고 살아간다.<br>
+      누구도 시키지 않았는데도.
+    </p>
+  </div>
+</section>
+
+<section class="posts-section">
+  <div class="posts-grid">
+    {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="post-card fade-in">
+      <div class="post-card-inner">
+        <div class="post-card-number">{{ forloop.rindex | prepend: '0' | slice: -2, 2 }}</div>
+        <time class="post-card-date">{{ post.date | date: "%Y.%m.%d" }}</time>
+        <h2 class="post-card-title">{{ post.title }}</h2>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+        <span class="post-card-read">읽기 &rarr;</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
