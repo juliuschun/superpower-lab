@@ -46,6 +46,8 @@
       });
     }, observerOptions);
 
+    // JS 로드 확인 후 애니메이션 활성화
+    document.documentElement.classList.add('js-loaded');
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 
